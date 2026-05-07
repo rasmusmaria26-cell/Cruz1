@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Send, User, Bot, Loader2 } from "lucide-react";
+import { MessageCircle, X, Send, Bot, Loader2 } from "lucide-react";
 
 type Message = {
     id: string;
@@ -18,7 +18,7 @@ export default function Chatbot() {
     const [messages, setMessages] = useState<Message[]>([
         {
             id: "1",
-            text: "Hi! 👋 I'm the Cruze Marine assistant. How can I help you today? You can ask about crew manning, college admissions, STCW courses, or passports!",
+            text: "Hi! I'm the Cruze Marine assistant. How can I help you today? You can ask about crew manning, college admissions, STCW courses, or passports.",
             sender: "bot",
             options: ["Crew Manning", "College Admission", "STCW Courses", "Passport Help"],
         },
@@ -62,7 +62,7 @@ export default function Chatbot() {
         } catch (error) {
             const errorMsg: Message = {
                 id: (Date.now() + 1).toString(),
-                text: "Sorry, I'm having trouble connecting to the captain. Please try again later.",
+                text: "Sorry, I'm having trouble connecting. Please reach out via WhatsApp.",
                 sender: "bot",
             };
             setMessages((prev) => [...prev, errorMsg]);
@@ -80,9 +80,14 @@ export default function Chatbot() {
             {/* Toggle Button */}
             <motion.button
                 onClick={() => setIsOpen(!isOpen)}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-50 w-14 h-14 bg-gradient-to-br from-cyan-400 to-teal-500 text-bg-deep rounded-full shadow-xl shadow-cyan-500/30 flex items-center justify-center hover:scale-110 transition-transform"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                style={{
+                    background: isOpen ? "var(--color-surface)" : "var(--color-gold)",
+                    color: isOpen ? "var(--color-gold)" : "var(--color-ink)",
+                    border: isOpen ? "1px solid var(--color-rule)" : "none",
+                }}
+                className="fixed bottom-[88px] right-6 md:bottom-8 md:right-8 z-50 w-14 h-14 rounded-none flex items-center justify-center transition-colors shadow-2xl"
             >
                 {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
             </motion.button>
@@ -91,49 +96,61 @@ export default function Chatbot() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                        className="fixed bottom-40 right-6 md:bottom-24 md:right-8 z-50 w-[90vw] md:w-[350px] h-[500px] bg-[#0a1628] border border-cyan-500/15 rounded-2xl shadow-2xl shadow-cyan-500/10 flex flex-col overflow-hidden"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        transition={{ duration: 0.2 }}
+                        style={{
+                            background: "var(--color-ink)",
+                            border: "1px solid var(--color-rule)",
+                        }}
+                        className="fixed bottom-[160px] right-6 md:bottom-28 md:right-8 z-50 w-[90vw] md:w-[360px] h-[500px] flex flex-col shadow-2xl"
                     >
                         {/* Header */}
-                        <div className="p-4 bg-[#0c1f35] border-b border-cyan-500/20 flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-[#060e1a]">
+                        <div className="p-4 flex items-center gap-3 border-b border-[var(--color-rule)]" style={{ background: "var(--color-surface)" }}>
+                            <div className="w-10 h-10 flex items-center justify-center border border-[var(--color-rule)]" style={{ background: "var(--color-ink)", color: "var(--color-gold)" }}>
                                 <Bot size={20} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-white">Cruze Marine AI</h3>
-                                <div className="flex items-center gap-1.5">
-                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                                    <span className="text-xs text-slate-400">Powered by Gemini</span>
+                                <h3 className="font-sans text-sm tracking-widest uppercase font-medium" style={{ color: "var(--color-ivory)" }}>Cruze AI</h3>
+                                <div className="flex items-center gap-1.5 mt-1">
+                                    <span className="w-1.5 h-1.5 bg-[var(--color-gold)] animate-pulse" />
+                                    <span className="font-sans text-[10px] uppercase tracking-wider" style={{ color: "var(--color-smoke)" }}>Online</span>
                                 </div>
                             </div>
                         </div>
 
                         {/* Messages Area */}
-                        <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                        <div className="flex-1 overflow-y-auto p-4 space-y-4 font-serif text-[15px] leading-relaxed hide-scrollbar" style={{ background: "var(--color-ink)" }}>
                             {messages.map((msg) => (
                                 <div
                                     key={msg.id}
                                     className={`flex flex-col ${msg.sender === "user" ? "items-end" : "items-start"}`}
                                 >
                                     <div
-                                        className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed ${msg.sender === "user"
-                                            ? "bg-gradient-to-r from-cyan-400 to-teal-500 text-[#060e1a] font-medium rounded-tr-none"
-                                            : "bg-[#0c1f35] text-slate-200 rounded-tl-none border border-cyan-500/10"
-                                            }`}
+                                        style={{
+                                            background: msg.sender === "user" ? "var(--color-gold)" : "var(--color-surface)",
+                                            color: msg.sender === "user" ? "var(--color-ink)" : "var(--color-ivory)",
+                                            border: msg.sender === "user" ? "none" : "1px solid var(--color-rule)",
+                                        }}
+                                        className="max-w-[85%] p-4"
                                     >
                                         {msg.text}
                                     </div>
 
                                     {/* Options Chips */}
                                     {msg.sender === "bot" && msg.options && (
-                                        <div className="flex flex-wrap gap-2 mt-2">
+                                        <div className="flex flex-col gap-2 mt-3 w-full max-w-[85%]">
                                             {msg.options.map((opt) => (
                                                 <button
                                                     key={opt}
                                                     onClick={() => handleOptionClick(opt)}
-                                                    className="px-3 py-1.5 bg-[#060e1a] border border-cyan-500/30 text-cyan-400 text-xs rounded-full hover:bg-cyan-500/10 transition-colors"
+                                                    className="w-full text-left p-3 font-sans text-[11px] uppercase tracking-widest transition-colors"
+                                                    style={{
+                                                        background: "transparent",
+                                                        border: "1px solid var(--color-rule)",
+                                                        color: "var(--color-gold)",
+                                                    }}
                                                 >
                                                     {opt}
                                                 </button>
@@ -145,9 +162,9 @@ export default function Chatbot() {
 
                             {isLoading && (
                                 <div className="flex items-start">
-                                    <div className="bg-[#1e293b] p-3 rounded-2xl rounded-tl-none border border-white/5 flex items-center gap-2">
-                                        <Loader2 size={16} className="animate-spin text-yellow-400" />
-                                        <span className="text-xs text-gray-400">Thinking...</span>
+                                    <div className="p-4 flex items-center gap-3 border border-[var(--color-rule)]" style={{ background: "var(--color-surface)" }}>
+                                        <Loader2 size={16} className="animate-spin" style={{ color: "var(--color-gold)" }} />
+                                        <span className="font-sans text-[11px] uppercase tracking-widest" style={{ color: "var(--color-smoke)" }}>Thinking...</span>
                                     </div>
                                 </div>
                             )}
@@ -155,25 +172,30 @@ export default function Chatbot() {
                         </div>
 
                         {/* Input Area */}
-                        <div className="p-4 bg-[#1e293b] border-t border-white/10">
+                        <div className="p-4 border-t border-[var(--color-rule)]" style={{ background: "var(--color-surface)" }}>
                             <form
                                 onSubmit={(e) => {
                                     e.preventDefault();
                                     handleSend(input);
                                 }}
-                                className="relative"
+                                className="relative flex items-center"
                             >
                                 <input
                                     type="text"
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     placeholder="Type your query..."
-                                    className="w-full bg-[#020817] border border-white/10 rounded-full pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-yellow-400 transition-colors"
+                                    className="w-full pl-4 pr-12 py-3 outline-none font-serif text-[16px] border border-[var(--color-rule)]"
+                                    style={{
+                                        background: "var(--color-ink)",
+                                        color: "var(--color-ivory)",
+                                    }}
                                 />
                                 <button
                                     type="submit"
                                     disabled={!input.trim() || isLoading}
-                                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-yellow-400 hover:bg-yellow-400/10 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="absolute right-0 top-0 bottom-0 px-4 flex items-center justify-center transition-colors disabled:opacity-50"
+                                    style={{ color: "var(--color-gold)" }}
                                 >
                                     <Send size={18} />
                                 </button>
