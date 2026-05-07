@@ -41,9 +41,9 @@ const TESTI = [
 
 const NAV = ["Home", "Services", "Process", "Testimonials", "Contact"];
 
-const EASE_SMOOTH = [0.25, 0.46, 0.45, 0.94];
-const EASE_SNAPPY = [0.34, 1.56, 0.64, 1];
-const EASE_CINEMATIC = [0.76, 0, 0.24, 1];
+const EASE_SMOOTH: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
+const EASE_SNAPPY: [number, number, number, number] = [0.34, 1.56, 0.64, 1];
+const EASE_CINEMATIC: [number, number, number, number] = [0.76, 0, 0.24, 1];
 
 export default function LandingPage() {
   const [menu, setMenu] = useState(false);
