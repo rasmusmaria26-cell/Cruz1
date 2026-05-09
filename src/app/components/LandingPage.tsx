@@ -102,9 +102,9 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-[36px] md:w-[40px] h-[36px] md:h-[40px] relative mix-blend-lighten">
-              <Image src="/logo (2).png" alt="Cruze Marine" fill className="object-contain" priority />
+              <Image src="/logo (2).png" alt="Cruze Marine Service" fill className="object-contain" priority />
             </div>
-            <div className="font-sans font-semibold text-[12px] text-[var(--color-ivory)] tracking-[0.2em] hidden sm:block">CRUZE MARINE</div>
+            <div className="font-sans font-semibold text-[11px] md:text-[12px] text-[var(--color-ivory)] tracking-[0.2em] block">CRUZE MARINE SERVICE</div>
           </div>
 
           <nav className="hidden md:flex gap-12 font-sans font-medium text-[11px] uppercase tracking-[0.18em]">
@@ -143,7 +143,7 @@ export default function LandingPage() {
           >
             <div className="h-[56px] px-6 flex items-center justify-between">
               <div className="w-[60px] h-[60px] relative mix-blend-lighten opacity-50">
-                <Image src="/logo (2).png" alt="Cruze Marine" fill className="object-contain" />
+                <Image src="/logo (2).png" alt="Cruze Marine Service" fill className="object-contain" />
               </div>
               <button onClick={() => setMenu(false)} className="text-[var(--color-gold)] w-[44px] h-[44px] flex items-center justify-center" style={{ touchAction: "manipulation" }}>
                 <X size={28} strokeWidth={1.5} />
@@ -196,10 +196,10 @@ export default function LandingPage() {
         {/* Bottom fade — blends smoke into the next section seamlessly */}
         <div className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none z-[3]"
           style={{ background: "linear-gradient(to bottom, transparent 0%, #0a0c0f 100%)" }} />
-        <div className="md:col-span-7 flex flex-col justify-center px-6 pt-8 pb-6 md:px-12 xl:px-20 md:pt-20 md:py-12 relative z-10 min-w-0">
+        <div className="md:col-span-7 flex flex-col justify-center px-6 pt-4 pb-4 md:px-12 xl:px-20 md:pt-20 md:py-12 relative z-10 min-w-0">
           
-          <div className="md:hidden mb-8 flex flex-col items-center justify-center relative mt-16">
-            <div className="font-sans font-medium text-[9px] uppercase tracking-[0.2em] text-[var(--color-smoke)] mb-6 relative z-10">EST. TUTICORIN · TAMIL NADU</div>
+          <div className="md:hidden mb-2 flex flex-col items-center justify-center relative mt-8">
+            <div className="font-sans font-bold text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-[var(--color-gold)] mb-2 relative z-10">EST. TUTICORIN · TAMIL NADU</div>
             <div className="relative flex justify-center items-center w-full">
               <div className="absolute rounded-full border border-dashed border-[var(--color-gold)] opacity-25 animate-spin-slow m-auto w-[160px] h-[160px]" style={{ borderWidth: '1px' }} />
               <div className="absolute rounded-full border border-[var(--color-gold-dim)] animate-spin-slow-reverse m-auto w-[120px] h-[120px]" style={{ borderWidth: '1px' }} />
@@ -210,7 +210,7 @@ export default function LandingPage() {
                 className="w-[88px] h-[88px] relative mix-blend-lighten z-10"
                 style={{ filter: 'drop-shadow(0 4px 24px rgba(200,136,42,0.4))' }}
               >
-                <Image src="/logo (2).png" alt="Cruze Marine Logo" fill className="object-contain" priority />
+                <Image src="/logo (2).png" alt="Cruze Marine Service Logo" fill className="object-contain" priority />
               </motion.div>
             </div>
             <div className="flex items-center justify-center gap-[2px] mt-10 opacity-60 w-full text-[var(--color-gold-dim)] text-[8px] tracking-[0.2em] select-none">
@@ -263,9 +263,9 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.8 }}
-              className="italic text-[clamp(15px,2vw,17px)] text-[var(--color-ivory)] opacity-80 max-w-[280px] md:max-w-[420px] leading-[1.85] mb-4"
+              className="italic text-[clamp(15px,2vw,17px)] text-[var(--color-ivory)] opacity-80 max-w-[280px] md:max-w-[420px] leading-[1.85] mb-8"
             >
-              A trusted institution guiding seafarers
+              Tuticorin's Maritime Experts
             </motion.p>
             <div className="flex flex-wrap gap-2">
               {['Crew Manning', 'Admissions', 'STCW & Passports'].map((tag, i) => (
@@ -288,7 +288,7 @@ export default function LandingPage() {
                 Get Started <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.25 }} className="w-full sm:w-auto">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.25 }} className="w-full sm:w-auto pb-12 md:pb-0">
               <a href="tel:+919003354028" className="border border-[var(--color-gold)] text-[var(--color-gold)] font-sans font-semibold text-[13px] uppercase tracking-[0.12em] w-full sm:w-auto min-h-[52px] flex items-center justify-center gap-2 px-8 transition-colors active:bg-[var(--color-gold)] active:text-[var(--color-ink)] md:hover:bg-[var(--color-surface)] rounded-none" style={{ touchAction: "manipulation" }}>
                 <Phone size={16} /> Call Now
               </a>
@@ -298,17 +298,17 @@ export default function LandingPage() {
 
         {/* Desktop Right Panel (Logo + Stats) */}
         <div className="hidden md:flex md:col-span-5 flex-col justify-center items-center relative border-l border-[var(--color-rule)] min-w-0">
-          <div className="relative mb-20 w-full flex justify-center">
-            <div className="absolute inset-0 rounded-full border border-dashed border-[var(--color-gold)] opacity-25 animate-spin-slow m-auto w-[240px] h-[240px]" style={{ borderWidth: '1px' }} />
-            <div className="absolute inset-0 rounded-full border border-[var(--color-gold-dim)] animate-spin-slow-reverse m-auto w-[200px] h-[200px]" style={{ borderWidth: '1px' }} />
+          <div className="relative mb-12 w-full flex justify-center">
+            <div className="absolute inset-0 rounded-full border border-dashed border-[var(--color-gold)] opacity-25 animate-spin-slow m-auto w-[320px] h-[320px]" style={{ borderWidth: '1px' }} />
+            <div className="absolute inset-0 rounded-full border border-[var(--color-gold-dim)] animate-spin-slow-reverse m-auto w-[280px] h-[280px]" style={{ borderWidth: '1px' }} />
             <motion.div
               initial={reduced ? { opacity: 0 } : { scale: 0.6, opacity: 0 }}
-              animate={reduced ? { opacity: 1 } : { scale: 1, opacity: 1 }}
+              animate={reduced ? { opacity: 1 } : { scale: 1.1, opacity: 1 }}
               transition={{ duration: 1.2, ease: EASE_SNAPPY }}
-              className="w-[160px] h-[160px] relative mix-blend-lighten z-10"
+              className="w-[280px] h-[280px] relative mix-blend-lighten z-10"
               style={{ filter: 'drop-shadow(0 4px 24px rgba(200,136,42,0.4))' }}
             >
-              <Image src="/logo (2).png" alt="Cruze Marine Logo" fill className="object-contain" priority />
+              <Image src="/logo (2).png" alt="Cruze Marine Service Logo" fill className="object-contain" priority />
             </motion.div>
           </div>
 
@@ -317,7 +317,7 @@ export default function LandingPage() {
               <div key={i} className="flex flex-col min-w-0 relative">
                 {i % 2 === 0 && <div className="absolute left-[-16px] top-0 bottom-0 w-[2px] bg-[var(--color-gold)] opacity-50" />}
                 <div className="font-display font-black italic text-[clamp(28px,3vw,56px)] text-[var(--color-gold)] leading-none mb-2 whitespace-nowrap">
-                  {s.val ? s.val : <AnimatedCounter to={s.to!} duration={1.2} delay={1.5} />}
+                  {s.val ? s.val : <AnimatedCounter to={s.to!} duration={1.5} delay={0.2} />}
                   {!s.val && s.suffix}
                 </div>
                 <div className="font-sans font-semibold text-[11px] uppercase tracking-[0.18em] text-[var(--color-parchment)] opacity-80">{s.label}</div>
@@ -333,7 +333,7 @@ export default function LandingPage() {
               <div key={i} className="min-w-[140px] snap-start flex flex-col justify-center px-6 py-4 relative border-r border-[var(--color-rule)] last:border-r-0">
                 {i === 0 && <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[var(--color-gold)]" />}
                 <div className="font-display font-black italic text-[24px] text-[var(--color-gold)] leading-none mb-1">
-                  {s.val ? s.val : <AnimatedCounter to={s.to!} duration={1.2} delay={1.5} />}
+                  {s.val ? s.val : <AnimatedCounter to={s.to!} duration={1.2} delay={0.1} />}
                   {!s.val && s.suffix}
                 </div>
                 <div className="font-sans font-semibold text-[10px] uppercase tracking-[0.18em] text-[var(--color-parchment)] opacity-80">{s.label}</div>
@@ -345,35 +345,26 @@ export default function LandingPage() {
         {/* Scroll Indicator */}
         <motion.div 
           style={{ opacity: useTransform(scrollY, [0, 100], [1, 0]) }}
-          className="absolute bottom-[90px] md:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 pointer-events-none z-10"
+          className="absolute bottom-[24px] left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 pointer-events-none z-10 opacity-70"
         >
-          <span className="font-sans font-semibold text-[9px] uppercase tracking-[0.18em] text-[var(--color-parchment)] opacity-80">Scroll</span>
-          <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.5, ease: "easeInOut", repeat: Infinity }}>
-            <ChevronDown size={20} className="text-[var(--color-gold-dim)]" />
+          <span className="font-sans font-bold text-[10px] uppercase tracking-[0.3em] text-[var(--color-gold)]">Scroll</span>
+          <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.8, ease: "easeInOut", repeat: Infinity }}>
+            <div className="w-[1px] h-[24px] bg-gradient-to-b from-[var(--color-gold)] to-transparent" />
           </motion.div>
         </motion.div>
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-24 md:py-32 bg-[var(--color-deep)] border-t border-[var(--color-rule)]">
-        <div className="px-6 md:px-12 xl:px-24 mb-16">
-          <div className="font-sans font-medium text-[11px] uppercase tracking-[0.18em] text-[var(--color-smoke)] mb-4">What We Do</div>
+      <section id="services" className="py-16 md:py-24 bg-[var(--color-deep)] border-t border-[var(--color-rule)]">
+        <div className="px-6 md:px-12 xl:px-24 mb-8">
+          <div className="font-sans font-medium text-[18px] md:text-[20px] uppercase tracking-[0.18em] text-[var(--color-smoke)] mb-4">What We Do</div>
           <motion.div 
             initial={{ scaleX: 0 }} 
             whileInView={{ scaleX: 1 }} 
             viewport={{ once: true, margin: "-80px" }} 
             transition={{ duration: 0.8, ease: EASE_CINEMATIC }}
-            className="h-[1px] bg-[var(--color-rule)] w-24 origin-left mb-6" 
+            className="h-[1px] bg-[var(--color-rule)] w-24 origin-left" 
           />
-          <motion.h2 
-            initial={reduced ? { opacity: 0 } : { clipPath: "inset(0 100% 0 0)" }}
-            whileInView={reduced ? { opacity: 1 } : { clipPath: "inset(0 0% 0 0)" }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.8, ease: EASE_CINEMATIC }}
-            className="font-display font-bold text-[clamp(40px,8vw,72px)] text-[var(--color-ivory)] leading-none"
-          >
-            Our Services
-          </motion.h2>
         </div>
 
         <div className="flex flex-col">
@@ -391,12 +382,12 @@ export default function LandingPage() {
                 whileInView={reduced ? { opacity: 1 } : { opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.8, delay: i * 0.1, ease: EASE_SMOOTH }}
-                className="flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-8"
+                className="flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-8 pb-5 md:pb-0"
               >
                 <div className="flex-1 flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
                   <div className="flex items-center gap-4">
-                    <span className="font-display font-black italic text-[28px] text-[var(--color-gold-dim)] leading-none w-10">
-                      <AnimatedCounter to={parseInt(s.n)} duration={0.4} delay={i * 0.1} />
+                    <span className="font-display font-black italic text-[clamp(36px,8vw,56px)] text-[var(--color-gold)] opacity-60 leading-none mr-4">
+                      {s.n}
                     </span>
                     <h3 className="font-sans font-semibold text-[16px] md:font-display md:font-bold md:text-[32px] text-[var(--color-ivory)] leading-none relative overflow-hidden">
                       {s.title}
@@ -407,7 +398,7 @@ export default function LandingPage() {
                     {s.desc}
                   </p>
                 </div>
-                <div className="font-sans font-medium text-[11px] uppercase tracking-[0.18em] text-[var(--color-gold)] md:opacity-0 md:-translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap mt-2 md:mt-0">
+                <div className="font-sans font-medium text-[11px] uppercase tracking-[0.18em] text-[var(--color-gold)] md:opacity-0 md:-translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap mt-3 md:mt-0">
                   Enquire on WhatsApp →
                 </div>
               </motion.div>
@@ -452,9 +443,9 @@ export default function LandingPage() {
               transition={{ duration: 1.4, ease: EASE_CINEMATIC }}
               className="absolute left-[3px] top-2 bottom-2 w-[2px] bg-[var(--color-gold)] origin-top"
             />
-            <div className="flex flex-col gap-[40px]">
+            <div className="flex flex-col gap-10">
               {STEPS.map((p, i) => (
-                <div key={i} className="relative pl-6">
+                <div key={i} className={`relative pl-6 ${i === 3 ? "bg-[var(--color-surface)] p-4 border-l-3 border-[var(--color-gold)]" : ""}`}>
                   <motion.div 
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
@@ -469,8 +460,11 @@ export default function LandingPage() {
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 0.6, delay: 0.3 + i * 0.2, ease: EASE_SMOOTH }}
                   >
-                    <h3 className="font-display font-bold text-[28px] text-[var(--color-ivory)] leading-none mb-2 relative pt-2">{p.title}</h3>
-                    <p className="font-serif text-[14px] text-[var(--color-smoke)] relative">{p.desc}</p>
+                    <h3 className={`font-display font-bold leading-none mb-2 relative pt-2 flex items-center gap-2 ${i === 3 ? "text-[var(--color-gold)] text-[32px]" : "text-[var(--color-ivory)] text-[28px]"}`}>
+                      {i === 3 && <CheckCircle size={16} />}
+                      {p.title}
+                    </h3>
+                    <p className={`font-serif text-[14px] relative ${i === 3 ? "text-[var(--color-parchment)]" : "text-[var(--color-smoke)]"}`}>{p.desc}</p>
                   </motion.div>
                 </div>
               ))}
@@ -511,10 +505,13 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        <div className="px-6 md:px-12 xl:px-24 pb-[60px]">
+          <div className="h-[1px] bg-[var(--color-rule)] w-full" />
+        </div>
       </section>
 
       {/* TESTIMONIALS */}
-      <section id="testimonials" className="py-24 md:py-32 border-t border-[var(--color-rule)] bg-[var(--color-deep)]">
+      <section id="testimonials" className="py-12 md:py-32 border-t border-[var(--color-rule)] bg-[var(--color-deep)]">
         <div className="px-6 md:px-12 xl:px-24 mb-12 md:mb-16">
           <div className="font-sans font-medium text-[11px] uppercase tracking-[0.18em] text-[var(--color-smoke)] mb-4">Client Stories</div>
           <motion.div 
@@ -535,8 +532,8 @@ export default function LandingPage() {
           </motion.h2>
         </div>
 
-        <div className="px-6 md:px-12 xl:px-24">
-          <div ref={testiScrollRef} className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 md:pb-0">
+        <div className="pl-6 md:px-12 xl:px-24">
+          <div ref={testiScrollRef} className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 md:pb-0 pr-6 md:pr-0">
             {TESTI.map((t, i) => (
               <motion.div
                 key={i}
@@ -546,7 +543,7 @@ export default function LandingPage() {
                   transformStyle: "preserve-3d",
                   perspective: 1000
                 }}
-                className="testi-card min-w-[88vw] md:min-w-0 snap-start bg-[var(--color-surface)] border border-[var(--color-rule)] p-[28px] md:p-10 relative flex flex-col"
+                className="testi-card min-w-[92vw] md:min-w-0 snap-start bg-[var(--color-surface)] border border-[var(--color-rule)] p-8 md:p-10 relative flex flex-col"
               >
                 <motion.div 
                   initial={{ scale: 0, opacity: 0 }}
@@ -556,12 +553,17 @@ export default function LandingPage() {
                 >
                   "
                 </motion.div>
-                <p className="font-serif italic text-[16px] text-[var(--color-ivory)] leading-[1.7] mb-8 relative z-10 flex-1 mt-6">
+                <p className="font-serif italic text-[18px] text-[var(--color-ivory)] leading-[1.7] mb-8 relative z-10 flex-1 mt-6">
                   {t.text}
                 </p>
-                <div className="mt-auto">
-                  <div className="font-sans font-semibold text-[11px] uppercase tracking-[0.18em] text-[var(--color-parchment)] mb-1">{t.name}</div>
-                  <div className="font-sans font-normal text-[10px] text-[var(--color-smoke)]">{t.role}</div>
+                <div className="mt-auto flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[var(--color-raised)] border border-[var(--color-gold-dim)] flex items-center justify-center font-display font-bold italic text-[16px] text-[var(--color-gold)] shrink-0">
+                    {t.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
+                  </div>
+                  <div>
+                    <div className="font-sans font-semibold text-[11px] uppercase tracking-[0.18em] text-[var(--color-parchment)] mb-1">{t.name}</div>
+                    <div className="font-sans font-normal text-[10px] text-[var(--color-smoke)]">{t.role}</div>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -577,7 +579,7 @@ export default function LandingPage() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-24 md:py-32 border-t border-[var(--color-rule)] bg-[var(--color-surface)]">
+      <section id="contact" className="pt-[60px] pb-24 md:py-32 border-t border-[var(--color-rule)] bg-[var(--color-surface)]">
         <div className="px-6 md:px-12 xl:px-24 grid md:grid-cols-2 gap-16">
           <div className="flex flex-col justify-center">
             <div className="font-sans font-medium text-[11px] uppercase tracking-[0.18em] text-[var(--color-smoke)] mb-4">Get In Touch</div>
@@ -636,7 +638,7 @@ export default function LandingPage() {
             <form onSubmit={e => {
               e.preventDefault();
               const fd = new FormData(e.currentTarget);
-              const text = `Hi Cruze Marine!%0A%0A*Name:* ${fd.get("name")}%0A*Mobile:* ${fd.get("mobile")}%0A*Service:* ${fd.get("service")}%0A*Message:* ${fd.get("msg")}`;
+              const text = `Hi Cruze Marine Service!%0A%0A*Name:* ${fd.get("name")}%0A*Mobile:* ${fd.get("mobile")}%0A*Service:* ${fd.get("service")}%0A*Message:* ${fd.get("msg")}`;
               window.open(`https://wa.me/${P1}?text=${text}`, "_blank");
             }} className="flex flex-col gap-4">
               <input name="name" type="text" placeholder="Full Name" required className="w-full h-[52px] bg-[var(--color-ink)] border border-[var(--color-rule)] px-4 font-serif text-[16px] text-[var(--color-ivory)] outline-none focus:border-[var(--color-gold)] transition-colors duration-200 rounded-none" />
@@ -660,16 +662,16 @@ export default function LandingPage() {
         <motion.div 
           animate={{ y: [-20, 0, -20] }} 
           transition={{ duration: 12, ease: "easeInOut", repeat: Infinity }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 watermark text-[30vw] leading-none whitespace-nowrap opacity-5"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 watermark text-[30vw] leading-none whitespace-nowrap opacity-[0.08] pointer-events-none"
         >
-          CRUZE MARINE
+          CRUZE
         </motion.div>
         
         <div className="grid md:grid-cols-4 gap-12 relative z-10 mb-[80px] md:mb-[60px]">
           <div className="flex flex-col">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-[36px] h-[36px] relative mix-blend-lighten"><Image src="/logo (2).png" alt="Cruze Marine" fill className="object-contain" /></div>
-              <div className="font-sans font-semibold text-[12px] tracking-[0.2em] text-[var(--color-ivory)]">CRUZE MARINE</div>
+              <div className="font-sans font-semibold text-[12px] tracking-[0.2em] text-[var(--color-ivory)]">CRUZE MARINE SERVICE</div>
             </div>
             <p className="font-serif text-[15px] text-[var(--color-parchment)] leading-[1.85] max-w-[250px]">
               Authoritative maritime consultancy based in Tuticorin, Tamil Nadu.
@@ -691,7 +693,7 @@ export default function LandingPage() {
           </div>
         </div>
         
-        <div className="font-sans font-medium text-[10px] text-[var(--color-smoke)] text-center pb-6 relative z-10 uppercase tracking-[0.18em] md:pb-[64px]">
+        <div className="font-sans font-medium text-[10px] text-[var(--color-smoke)] text-center pb-20 relative z-10 uppercase tracking-[0.18em] md:pb-[64px]">
           © {new Date().getFullYear()} CRUZE MARINE SERVICE. ALL RIGHTS RESERVED.
         </div>
       </footer>
@@ -706,7 +708,9 @@ export default function LandingPage() {
         </a>
       </div>
 
-      <Chatbot />
+      <div className="hidden md:block">
+        <Chatbot />
+      </div>
     </div>
   );
 }

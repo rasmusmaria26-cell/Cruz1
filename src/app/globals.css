@@ -9,17 +9,17 @@
   --color-deep: #0e1318;
   --color-surface: #151c24;
   --color-raised: #1c2530;
-  --color-gold: #c8882a;
-  --color-gold-light: #e8aa50;
-  --color-gold-warm: #f0c070;
-  --color-gold-dim: #7a5018;
+  --color-gold: #b8924a;
+  --color-gold-light: #d4ae72;
+  --color-gold-warm: #e8aa50;
+  --color-gold-dim: #7a5a2a;
   --color-ocean: #1a3a52;
   --color-ocean-light: #2a5a7a;
   --color-sunset: #8a3820;
   --color-ivory: #f4efe4;
   --color-parchment: #c8b898;
   --color-smoke: #5a6070;
-  --color-rule: rgba(200, 136, 42, 0.15);
+  --color-rule: rgba(184, 146, 74, 0.15);
 }
 
 @layer base {
@@ -28,17 +28,17 @@
     --bg-deep: #0e1318;
     --bg-surface: #151c24;
     --bg-raised: #1c2530;
-    --gold: #c8882a;
-    --gold-light: #e8aa50;
-    --gold-warm: #f0c070;
-    --gold-dim: #7a5018;
+    --gold: #b8924a;
+    --gold-light: #d4ae72;
+    --gold-warm: #e8aa50;
+    --gold-dim: #7a5a2a;
     --ocean: #1a3a52;
     --ocean-light: #2a5a7a;
     --sunset: #8a3820;
     --ivory: #f4efe4;
     --parchment: #c8b898;
     --smoke: #5a6070;
-    --rule: rgba(200, 136, 42, 0.15);
+    --rule: rgba(184, 146, 74, 0.15);
   }
 
   body {
@@ -59,17 +59,17 @@
     background: var(--bg-ink);
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(200, 136, 42, 0.2);
+    background: rgba(184, 146, 74, 0.2);
     border-radius: 0;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(200, 136, 42, 0.4);
+    background: rgba(184, 146, 74, 0.4);
   }
 
   /* Remove default arrows from select */
   select {
     appearance: none;
-    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c8882a%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23b8924a%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 16px;
@@ -106,13 +106,13 @@
 }
 
 .hero-radial-vignette {
-  background: radial-gradient(circle at top center, rgba(200, 136, 42, 0.12) 0%, rgba(10, 12, 15, 0.45) 70%);
+  background: radial-gradient(circle at top center, rgba(184, 146, 74, 0.12) 0%, rgba(10, 12, 15, 0.45) 70%);
 }
 
 /* On desktop the WebGL smoke provides depth — vignette should be near-transparent */
 @media (min-width: 768px) {
   .hero-radial-vignette {
-    background: radial-gradient(circle at top center, rgba(200, 136, 42, 0.08) 0%, rgba(10, 12, 15, 0.25) 80%);
+    background: radial-gradient(circle at top center, rgba(184, 146, 74, 0.08) 0%, rgba(10, 12, 15, 0.25) 80%);
   }
 }
 

@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 function useCountUp(target: number, duration: number, delay: number = 0) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px" });
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (!isInView) return;
